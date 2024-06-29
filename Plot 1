@@ -3,6 +3,7 @@ NEI[, Emissions := lapply(.SD, as.numeric), .SDcols = c("Emissions")]
 
 totalNEI <- NEI[, lapply(.SD, sum, na.rm = TRUE), .SDcols = c("Emissions"), by = year]
 
+###Plot###
 png(filename='plot1.png')
 
 barplot(totalNEI[, Emissions]
